@@ -1,0 +1,20 @@
+2013-09-04 17:31:35.816/2.149 Oracle Coherence 12.1.2.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/scratch/sgeib/soabeta0922/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2013-09-04 17:31:35.875/2.208 Oracle Coherence 12.1.2.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/scratch/sgeib/soabeta0922/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2013-09-04 17:31:35.876/2.209 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2013-09-04 17:31:35.879/2.212 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2013-09-04 17:31:35.880/2.213 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2013-09-04 17:31:35.881/2.214 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+
+Oracle Coherence Version 12.1.2.0.0 Build 44396
+ Grid Edition: Development mode
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+2013-09-04 17:31:36.002/2.335 Oracle Coherence GE 12.1.2.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+Sep 04, 2013 5:31:36 PM oracle.adf.share.ADFContext getCurrent
+WARNING: Automatically initializing a DefaultContext for getCurrent.
+Caller should ensure that a DefaultContext is proper for this use.
+Memory leaks and/or unexpected behaviour may occur if the automatic initialization is performed improperly.
+This message may be avoided by performing initADFContext before using getCurrent().
+For more information please enable logging for oracle.adf.share.ADFContext at FINEST level.
+Sep 04, 2013 5:31:36 PM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.

@@ -1,0 +1,22 @@
+2013-08-29 11:05:55.821/2.171 Oracle Coherence 12.1.2.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/scratch/sgeib/soabeta0922/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2013-08-29 11:05:55.904/2.254 Oracle Coherence 12.1.2.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/scratch/sgeib/soabeta0922/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2013-08-29 11:05:55.906/2.256 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2013-08-29 11:05:55.910/2.260 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2013-08-29 11:05:55.912/2.262 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2013-08-29 11:05:55.913/2.263 Oracle Coherence 12.1.2.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+
+Oracle Coherence Version 12.1.2.0.0 Build 44396
+ Grid Edition: Development mode
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+2013-08-29 11:05:56.050/2.400 Oracle Coherence GE 12.1.2.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+Aug 29, 2013 11:05:56 AM oracle.adf.share.ADFContext getCurrent
+WARNING: Automatically initializing a DefaultContext for getCurrent.
+Caller should ensure that a DefaultContext is proper for this use.
+Memory leaks and/or unexpected behaviour may occur if the automatic initialization is performed improperly.
+This message may be avoided by performing initADFContext before using getCurrent().
+For more information please enable logging for oracle.adf.share.ADFContext at FINEST level.
+Aug 29, 2013 11:05:56 AM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.
+Aug 29, 2013 11:05:57 AM oracle.integration.platform.blocks.PlatformConfigurationProvider getPlatformConfigurationProvider
+WARNING: JRF is unable to determine the current application server platform.
