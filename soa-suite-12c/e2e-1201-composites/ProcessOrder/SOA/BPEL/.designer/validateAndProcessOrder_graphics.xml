@@ -4,13 +4,18 @@
    <annotationfile/>
    <iconize/>
    <partnerlink_locations>
-      <partnerlink name="validatepaymentprocess_client" x="0" y="434" side="left"/>
-      <partnerlink name="getPaymentInformation" x="632" y="284" side="right"/>
+      <partnerlink name="validateandprocessorder_client" x="0" y="90" side="left"/>
+      <partnerlink name="updateOrderStatus" x="0" y="1341" side="left"/>
+      <partnerlink name="writeOrderToDatabase" x="622" y="616" side="right"/>
+      <partnerlink name="validatePaymentService" x="622" y="1009" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,214,783,361" show_swimlanes="true">
+   <graph_layout viewport="0,0,774,425" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
-      <layout_item collapsed="false" xpath="/process/sequence/scope" type="scope" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope[1]" type="scope" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope[1]/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope[2]" type="scope" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope[2]/sequence" type="sequence"/>
    </graph_layout>
    <bookmarks/>
 </graphics>

@@ -75,13 +75,14 @@
       <string v="oracle.tip.tools.ide.ess.addin.ESSContentSetProvider/ess-content"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/cepContentSet"/>
    </list>
-   <value n="defaultPackage" v="validatepayment"/>
+   <value n="defaultPackage" v="processorder"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="SOA"/>
          <string v="WSDL"/>
          <string v="WSPolicy"/>
          <string v="XML"/>
+         <string v="XML_SCHEMA"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
@@ -114,7 +115,7 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="ValidatePayment">
+         <hash n="ProcessOrder">
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
@@ -201,18 +202,18 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/sca_ValidatePayment.jar"/>
+            <url n="jarURL" path="deploy/sca_ProcessOrder.jar"/>
             <value n="profileClass" v="oracle.tip.tools.ide.fabric.deploy.sar.SarProfile"/>
-            <value n="profileName" v="ValidatePayment"/>
+            <value n="profileName" v="ProcessOrder"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="ValidatePayment"/>
+         <string v="ProcessOrder"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="e2e-1201-composites-ValidatePayment-webapp"/>
-      <value n="j2eeWebContextRoot" v="e2e-1201-composites-ValidatePayment-context-root"/>
+      <value n="j2eeWebAppName" v="e2e-1201-composites-ProcessOrder-webapp"/>
+      <value n="j2eeWebContextRoot" v="e2e-1201-composites-ProcessOrder-context-root"/>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">

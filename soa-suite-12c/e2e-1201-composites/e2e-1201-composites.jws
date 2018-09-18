@@ -18,12 +18,13 @@
    </hash>
    <list n="contentSets">
       <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
-      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="ProcessOrder/ProcessOrder.jpr"/></hash>
       <hash><url n="URL" path="ValidatePayment/ValidatePayment.jpr"/></hash>
    </list>
 </jws:workspace>
