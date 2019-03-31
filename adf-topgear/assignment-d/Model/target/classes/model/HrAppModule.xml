@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrAppModule"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsVO1"
+    ViewObjectName="model.DepartmentsVO"/>
+  <ViewUsage
+    Name="EmployeesVO1"
+    ViewObjectName="model.EmployeesVO"/>
+  <ViewUsage
+    Name="QueryJobsReadOnlyVO1"
+    ViewObjectName="model.QueryJobsReadOnlyVO"/>
+  <ViewUsage
+    Name="EmployeesVO2"
+    ViewObjectName="model.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesVO3"
+    ViewObjectName="model.EmployeesVO"/>
+  <ViewUsage
+    Name="DepartmentsVO2"
+    ViewObjectName="model.DepartmentsVO"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="model.EmpManagerFkLink"
+    SrcViewUsageName="model.HrAppModule.EmployeesVO1"
+    DstViewUsageName="model.HrAppModule.EmployeesVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="model.EmpDeptFkLink"
+    SrcViewUsageName="model.HrAppModule.DepartmentsVO1"
+    DstViewUsageName="model.HrAppModule.EmployeesVO3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="model.DeptMgrFkLink"
+    SrcViewUsageName="model.HrAppModule.EmployeesVO1"
+    DstViewUsageName="model.HrAppModule.DepartmentsVO2"
+    Reversed="false"/>
+</AppModule>
