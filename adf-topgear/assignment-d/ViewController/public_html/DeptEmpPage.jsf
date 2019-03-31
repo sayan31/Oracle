@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
     <af:document title="DeptEmpPage.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -23,7 +24,7 @@
                                           filterModel="#{bindings.EmployeesInDepartmentVOQuery.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.EmployeesInDepartmentVOQuery.processQuery}"
-                                          varStatus="vs" id="t1">
+                                          varStatus="vs" id="t1" columnSelection="single">
                                     <af:column sortProperty="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.name}"
                                                filterable="true" sortable="true"
                                                headerText="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.label}"
@@ -141,7 +142,7 @@
                         <f:facet name="second">
                             <af:panelTabbed position="above" id="pt2">
                                 <af:showDetailItem id="tab1" text="Tab Label 1">
-                                    <af:panelFormLayout id="pfl2">
+                                    <af:panelFormLayout id="pfl2" rows="5">
                                         <af:inputText value="#{bindings.EmployeeId.inputValue}"
                                                       label="#{bindings.EmployeeId.hints.label}"
                                                       required="#{bindings.EmployeeId.hints.mandatory}"
@@ -273,7 +274,13 @@
                                 </f:facet>
                             </af:panelFormLayout>
                         </af:showDetailItem>
-                        <af:showDetailItem text="More info" id="pane2"/>
+                        <af:showDetailItem text="More info" id="pane2">
+                            <dvt:pieChart id="pieChart1" var="row"
+                                          value="#{bindings.EmployeesInDepartmentVO1.collectionModel}">
+                                <dvt:chartLegend id="cl1"/>
+                                <dvt:pieDataItem id="di1" label="#{row.LastName}" value="#{row.Salary}"/>
+                            </dvt:pieChart>
+                        </af:showDetailItem>
                     </af:panelAccordion>
                 </f:facet>
                 <f:facet name="branding"/>
