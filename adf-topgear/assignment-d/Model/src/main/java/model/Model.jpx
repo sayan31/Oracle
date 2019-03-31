@@ -15,15 +15,6 @@
     <Attr Name="_appModuleNames0" Value="model.HrAppModule"/>
   </DesignTime>
   <Containee
-    Name="entities"
-    PackageName="model.entities"
-    ObjectType="JboPackage">
-    <DesignTime>
-      <Attr Name="_EO" Value="true"/>
-      <Attr Name="_AS" Value="true"/>
-    </DesignTime>
-  </Containee>
-  <Containee
     Name="model"
     PackageName="model"
     ObjectType="JboPackage">
