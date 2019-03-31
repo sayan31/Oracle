@@ -7,9 +7,11 @@
   </definitionFactories>
   <pageMap>
     <page path="/DeptEmpPage.jsf" usageId="view_DeptEmpPagePageDef"/>
+    <page path="/EmpSearchPage.jsf" usageId="view_EmpSearchPagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_DeptEmpPagePageDef" path="view.pageDefs.DeptEmpPagePageDef"/>
+    <page id="view_EmpSearchPagePageDef" path="view.pageDefs.EmpSearchPagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="HrAppModuleDataControl" Package="model"
