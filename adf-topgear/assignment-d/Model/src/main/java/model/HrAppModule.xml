@@ -20,7 +20,7 @@
     Name="EmployeesVO2"
     ViewObjectName="model.EmployeesVO"/>
   <ViewUsage
-    Name="EmployeesVO3"
+    Name="EmployeesInDepartmentVO"
     ViewObjectName="model.EmployeesVO"/>
   <ViewUsage
     Name="DepartmentsVO2"
@@ -35,7 +35,7 @@
     Name="EmpDeptFkLink1"
     ViewLinkObjectName="model.EmpDeptFkLink"
     SrcViewUsageName="model.HrAppModule.DepartmentsVO1"
-    DstViewUsageName="model.HrAppModule.EmployeesVO3"
+    DstViewUsageName="model.HrAppModule.EmployeesInDepartmentVO"
     Reversed="false"/>
   <ViewLinkUsage
     Name="DeptMgrFkLink1"

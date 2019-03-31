@@ -12,11 +12,235 @@
                                 <f:facet name="menus"/>
                                 <f:facet name="toolbar"/>
                                 <f:facet name="statusbar"/>
+                                <af:table value="#{bindings.EmployeesInDepartmentVO.collectionModel}" var="row"
+                                          rows="#{bindings.EmployeesInDepartmentVO.rangeSize}"
+                                          emptyText="#{bindings.EmployeesInDepartmentVO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.EmployeesInDepartmentVO.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.EmployeesInDepartmentVO.collectionModel.makeCurrent}"
+                                          rowSelection="single"
+                                          fetchSize="#{bindings.EmployeesInDepartmentVO.rangeSize}" id="t1">
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.label}"
+                                               id="c1">
+                                        <af:inputText value="#{row.bindings.EmployeeId.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.tooltip}"
+                                                      id="it5">
+                                            <f:validator binding="#{row.bindings.EmployeeId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeesInDepartmentVO.hints.EmployeeId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.FirstName.label}"
+                                               id="c2">
+                                        <af:inputText value="#{row.bindings.FirstName.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.FirstName.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.FirstName.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.FirstName.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.FirstName.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.FirstName.tooltip}"
+                                                      id="it6">
+                                            <f:validator binding="#{row.bindings.FirstName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.LastName.label}"
+                                               id="c3">
+                                        <af:inputText value="#{row.bindings.LastName.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.LastName.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.LastName.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.LastName.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.LastName.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.LastName.tooltip}"
+                                                      id="it7">
+                                            <f:validator binding="#{row.bindings.LastName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.Email.label}"
+                                               id="c4">
+                                        <af:inputText value="#{row.bindings.Email.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.Email.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.Email.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.Email.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.Email.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.Email.tooltip}"
+                                                      id="it8">
+                                            <f:validator binding="#{row.bindings.Email.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.label}"
+                                               id="c5">
+                                        <af:inputText value="#{row.bindings.PhoneNumber.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.PhoneNumber.tooltip}"
+                                                      id="it9">
+                                            <f:validator binding="#{row.bindings.PhoneNumber.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.HireDate.label}"
+                                               id="c6">
+                                        <af:inputDate value="#{row.bindings.HireDate.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.HireDate.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.HireDate.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.HireDate.displayWidth}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.HireDate.tooltip}"
+                                                      id="id1">
+                                            <f:validator binding="#{row.bindings.HireDate.validator}"/>
+                                            <af:convertDateTime pattern="#{bindings.EmployeesInDepartmentVO.hints.HireDate.format}"/>
+                                        </af:inputDate>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.JobId.label}"
+                                               id="c7">
+                                        <af:inputText value="#{row.bindings.JobId.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.JobId.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.JobId.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.JobId.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.JobId.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.JobId.tooltip}"
+                                                      id="it10">
+                                            <f:validator binding="#{row.bindings.JobId.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.Salary.label}"
+                                               id="c8">
+                                        <af:inputText value="#{row.bindings.Salary.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.Salary.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.Salary.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.Salary.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.Salary.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.Salary.tooltip}"
+                                                      id="it11">
+                                            <f:validator binding="#{row.bindings.Salary.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeesInDepartmentVO.hints.Salary.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.label}"
+                                               id="c9">
+                                        <af:inputText value="#{row.bindings.CommissionPct.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.tooltip}"
+                                                      id="it12">
+                                            <f:validator binding="#{row.bindings.CommissionPct.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeesInDepartmentVO.hints.CommissionPct.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.label}"
+                                               id="c10">
+                                        <af:inputText value="#{row.bindings.ManagerId.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.tooltip}"
+                                                      id="it13">
+                                            <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeesInDepartmentVO.hints.ManagerId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.label}"
+                                               id="c11">
+                                        <af:inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                                      label="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.label}"
+                                                      required="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.mandatory}"
+                                                      columns="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.precision}"
+                                                      shortDesc="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.tooltip}"
+                                                      id="it14">
+                                            <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeesInDepartmentVO.hints.DepartmentId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                </af:table>
                             </af:panelCollection>
                         </f:facet>
                         <f:facet name="second">
                             <af:panelTabbed position="above" id="pt2">
-                                <af:showDetailItem id="tab1" text="Tab Label 1"/>
+                                <af:showDetailItem id="tab1" text="Tab Label 1">
+                                    <af:panelFormLayout id="pfl2">
+                                        <af:inputText value="#{bindings.EmployeeId.inputValue}"
+                                                      label="#{bindings.EmployeeId.hints.label}"
+                                                      required="#{bindings.EmployeeId.hints.mandatory}"
+                                                      columns="#{bindings.EmployeeId.hints.displayWidth}"
+                                                      maximumLength="#{bindings.EmployeeId.hints.precision}"
+                                                      shortDesc="#{bindings.EmployeeId.hints.tooltip}" id="it15">
+                                            <f:validator binding="#{bindings.EmployeeId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeeId.format}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.FirstName.inputValue}"
+                                                      label="#{bindings.FirstName.hints.label}"
+                                                      required="#{bindings.FirstName.hints.mandatory}"
+                                                      columns="#{bindings.FirstName.hints.displayWidth}"
+                                                      maximumLength="#{bindings.FirstName.hints.precision}"
+                                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it16">
+                                            <f:validator binding="#{bindings.FirstName.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.LastName.inputValue}"
+                                                      label="#{bindings.LastName.hints.label}"
+                                                      required="#{bindings.LastName.hints.mandatory}"
+                                                      columns="#{bindings.LastName.hints.displayWidth}"
+                                                      maximumLength="#{bindings.LastName.hints.precision}"
+                                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it17">
+                                            <f:validator binding="#{bindings.LastName.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Email.inputValue}"
+                                                      label="#{bindings.Email.hints.label}"
+                                                      required="#{bindings.Email.hints.mandatory}"
+                                                      columns="#{bindings.Email.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Email.hints.precision}"
+                                                      shortDesc="#{bindings.Email.hints.tooltip}" id="it18">
+                                            <f:validator binding="#{bindings.Email.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.PhoneNumber.inputValue}"
+                                                      label="#{bindings.PhoneNumber.hints.label}"
+                                                      required="#{bindings.PhoneNumber.hints.mandatory}"
+                                                      columns="#{bindings.PhoneNumber.hints.displayWidth}"
+                                                      maximumLength="#{bindings.PhoneNumber.hints.precision}"
+                                                      shortDesc="#{bindings.PhoneNumber.hints.tooltip}" id="it19">
+                                            <f:validator binding="#{bindings.PhoneNumber.validator}"/>
+                                        </af:inputText>
+                                        <af:inputDate value="#{bindings.HireDate.inputValue}"
+                                                      label="#{bindings.HireDate.hints.label}"
+                                                      required="#{bindings.HireDate.hints.mandatory}"
+                                                      columns="#{bindings.HireDate.hints.displayWidth}"
+                                                      shortDesc="#{bindings.HireDate.hints.tooltip}" id="id2">
+                                            <f:validator binding="#{bindings.HireDate.validator}"/>
+                                            <af:convertDateTime pattern="#{bindings.HireDate.format}"/>
+                                        </af:inputDate>
+                                        <af:inputText value="#{bindings.JobId.inputValue}"
+                                                      label="#{bindings.JobId.hints.label}"
+                                                      required="#{bindings.JobId.hints.mandatory}"
+                                                      columns="#{bindings.JobId.hints.displayWidth}"
+                                                      maximumLength="#{bindings.JobId.hints.precision}"
+                                                      shortDesc="#{bindings.JobId.hints.tooltip}" id="it20">
+                                            <f:validator binding="#{bindings.JobId.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Salary.inputValue}"
+                                                      label="#{bindings.Salary.hints.label}"
+                                                      required="#{bindings.Salary.hints.mandatory}"
+                                                      columns="#{bindings.Salary.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Salary.hints.precision}"
+                                                      shortDesc="#{bindings.Salary.hints.tooltip}" id="it21">
+                                            <f:validator binding="#{bindings.Salary.validator}"/>
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Salary.format}"/>
+                                        </af:inputText>
+                                        <f:facet name="footer">
+                                            <af:button text="Submit" id="b5"/>
+                                        </f:facet>
+                                    </af:panelFormLayout>
+                                </af:showDetailItem>
                             </af:panelTabbed>
                         </f:facet>
                     </af:panelSplitter>
