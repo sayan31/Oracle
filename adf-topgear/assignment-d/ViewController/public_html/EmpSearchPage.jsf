@@ -54,7 +54,7 @@
                                               required="#{bindings.Salary.hints.mandatory}"
                                               columns="#{bindings.Salary.hints.displayWidth}"
                                               maximumLength="#{bindings.Salary.hints.precision}"
-                                              shortDesc="#{bindings.Salary.hints.tooltip}" id="it5">
+                                              shortDesc="#{bindings.Salary.hints.tooltip}" id="sal" autoSubmit="true">
                                     <f:validator binding="#{bindings.Salary.validator}"/>
                                     <af:convertNumber groupingUsed="false" pattern="#{bindings.Salary.format}"/>
                                 </af:inputText>
@@ -98,7 +98,8 @@
                                               required="#{bindings.AnnualSalary.hints.mandatory}"
                                               columns="#{bindings.AnnualSalary.hints.displayWidth}"
                                               maximumLength="#{bindings.AnnualSalary.hints.precision}"
-                                              shortDesc="#{bindings.AnnualSalary.hints.tooltip}" id="it8">
+                                              shortDesc="#{bindings.AnnualSalary.hints.tooltip}" id="it8"
+                                              partialTriggers="sal">
                                     <f:validator binding="#{bindings.AnnualSalary.validator}"/>
                                     <af:convertNumber groupingUsed="false" pattern="#{bindings.AnnualSalary.format}"/>
                                 </af:inputText>
