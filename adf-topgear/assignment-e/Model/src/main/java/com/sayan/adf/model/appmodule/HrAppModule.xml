@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrAppModule"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.sayan.adf.model.appmodule.HrAppModule_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="EmployeesBase"
+    ViewObjectName="com.sayan.adf.model.views.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesManaged"
+    ViewObjectName="com.sayan.adf.model.views.EmployeesVO"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="com.sayan.adf.model.views.EmpManagerFkLink"
+    SrcViewUsageName="com.sayan.adf.model.appmodule.HrAppModule.EmployeesBase"
+    DstViewUsageName="com.sayan.adf.model.appmodule.HrAppModule.EmployeesManaged"
+    Reversed="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.sayan.adf.model.ModelBundle"/>
+  </ResourceBundle>
+</AppModule>
