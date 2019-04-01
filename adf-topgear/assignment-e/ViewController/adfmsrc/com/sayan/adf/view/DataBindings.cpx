@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.16.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.sayan.adf.view" ClientType="Generic">
+  <pageMap>
+    <page path="/search.jsff" usageId="com_sayan_adf_view_searchPageDef"/>
+    <page path="/update.jsff" usageId="com_sayan_adf_view_updatePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_sayan_adf_view_searchPageDef" path="com.sayan.adf.view.pageDefs.searchPageDef"/>
+    <page id="com_sayan_adf_view_updatePageDef" path="com.sayan.adf.view.pageDefs.updatePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HrAppModuleDataControl" Package="com.sayan.adf.model.appmodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HrAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
