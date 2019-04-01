@@ -56,8 +56,8 @@
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Salary.format}"/>
     </af:inputText>
     <f:facet name="footer">
-      <af:button text="Submit" id="b1"/>
-      <af:button text="Cancel" id="b2"/>
+      <af:button text="Submit" id="b1" action="commit"/>
+      <af:button text="Cancel" id="b2" action="rollback"/>
     </f:facet>
   </af:panelFormLayout>
 </ui:composition>
