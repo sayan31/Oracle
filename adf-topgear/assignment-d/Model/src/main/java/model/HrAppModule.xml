@@ -28,6 +28,9 @@
   <ViewUsage
     Name="EmployeeDetailsVO1"
     ViewObjectName="model.EmployeeDetailsVO"/>
+  <ViewUsage
+    Name="QueryEmployeeByEmailVO1"
+    ViewObjectName="model.QueryEmployeeByEmailVO"/>
   <ViewLinkUsage
     Name="EmpManagerFkLink1"
     ViewLinkObjectName="model.EmpManagerFkLink"
