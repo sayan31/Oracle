@@ -63,5 +63,7 @@
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="HrAppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
             DataControl="HrAppModuleDataControl"/>
+    <action IterBinding="EmployeeDetailsVO1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

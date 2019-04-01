@@ -125,6 +125,9 @@
                                             <af:button actionListener="#{bindings.Last.execute}" text="Last"
                                                        disabled="#{!bindings.Last.enabled}" partialSubmit="true"
                                                        id="b4"/>
+                                            <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                       text="CreateInsert" disabled="#{!bindings.CreateInsert.enabled}"
+                                                       id="CreateInsert" partialTriggers="CreateInsert"/>
                                         </af:panelGroupLayout>
                                         <af:button text="Submit" id="b5"/>
                                         <af:button text="Back" id="b6" action="back"/>
