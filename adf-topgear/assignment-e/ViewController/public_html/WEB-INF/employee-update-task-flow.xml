@@ -6,12 +6,15 @@
       <shared/>
     </data-control-scope>
     <view id="intro">
+      <page>/intro.jsff</page>
       <train-stop/>
     </view>
     <view id="search">
+      <page>/search.jsff</page>
       <train-stop/>
     </view>
     <view id="update">
+      <page>/update.jsff</page>
       <train-stop/>
     </view>
     <train/>
