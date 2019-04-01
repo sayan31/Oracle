@@ -283,6 +283,8 @@
                                     </af:panelGroupLayout>
                                 </f:facet>
                             </af:panelFormLayout>
+                            <af:separator id="s1"/>
+                            <af:region value="#{bindings.emailsearchtaskflow1.regionModel}" id="r1"/>
                         </af:showDetailItem>
                         <af:showDetailItem text="More info" id="pane2">
                             <dvt:pieChart id="pieChart1" var="row"

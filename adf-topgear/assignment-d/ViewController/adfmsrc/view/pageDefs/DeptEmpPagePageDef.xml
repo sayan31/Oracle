@@ -9,6 +9,8 @@
               id="EmployeesInDepartmentVOIterator"/>
     <searchRegion Binds="EmployeesInDepartmentVOIterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmployeesInDepartmentVOQuery"/>
+    <taskFlow id="emailsearchtaskflow1" taskFlowId="/WEB-INF/email-search-task-flow.xml#email-search-task-flow"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="DepartmentsVO1Iterator" id="DepartmentId">

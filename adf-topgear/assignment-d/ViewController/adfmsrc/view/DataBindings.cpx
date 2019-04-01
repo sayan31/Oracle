@@ -4,14 +4,19 @@
   <definitionFactories>
     <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
              className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
   </definitionFactories>
   <pageMap>
     <page path="/DeptEmpPage.jsf" usageId="view_DeptEmpPagePageDef"/>
     <page path="/EmpSearchPage.jsf" usageId="view_EmpSearchPagePageDef"/>
+    <page path="/searchByEmail.jsff" usageId="view_searchByEmailPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_DeptEmpPagePageDef" path="view.pageDefs.DeptEmpPagePageDef"/>
     <page id="view_EmpSearchPagePageDef" path="view.pageDefs.EmpSearchPagePageDef"/>
+    <page id="view_searchByEmailPageDef" path="view.pageDefs.searchByEmailPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="HrAppModuleDataControl" Package="model"

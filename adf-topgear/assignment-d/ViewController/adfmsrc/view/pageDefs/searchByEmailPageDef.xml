@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.16.48" id="searchByEmailPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variableUsage DataControl="HrAppModuleDataControl" Binds="QueryEmployeeByEmailVO1.variablesMap.p_email"
+                     Name="ExecuteWithParams_p_email" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="QueryEmployeeByEmailVO1" RangeSize="25" DataControl="HrAppModuleDataControl"
+              id="QueryEmployeeByEmailVO1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="QueryEmployeeByEmailVO1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true"
+            Action="executeWithParams">
+      <NamedData NDName="p_email" NDType="java.lang.String" NDValue="${bindings.ExecuteWithParams_p_email}"/>
+    </action>
+    <attributeValues IterBinding="variables" id="p_email">
+      <AttrNames>
+        <Item Value="ExecuteWithParams_p_email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="QueryEmployeeByEmailVO1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="QueryEmployeeByEmailVO1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
