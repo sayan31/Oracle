@@ -75,6 +75,7 @@
                                                               columns="#{bindings.JobId.hints.displayWidth}"
                                                               shortDesc="#{bindings.JobId.hints.tooltip}">
                                     <f:validator binding="#{bindings.JobId.validator}"/>
+                                    <af:autoSuggestBehavior suggestedItems="#{bindings.JobId.suggestedItems}"/>
                                 </af:inputComboboxListOfValues>
                                 <af:inputText value="#{bindings.DepartmentId.inputValue}"
                                               label="#{bindings.DepartmentId.hints.label}"
