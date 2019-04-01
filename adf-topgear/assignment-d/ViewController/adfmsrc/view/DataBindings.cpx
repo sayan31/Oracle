@@ -12,11 +12,17 @@
     <page path="/DeptEmpPage.jsf" usageId="view_DeptEmpPagePageDef"/>
     <page path="/EmpSearchPage.jsf" usageId="view_EmpSearchPagePageDef"/>
     <page path="/searchByEmail.jsff" usageId="view_searchByEmailPageDef"/>
+    <page path="/Departments.jsff" usageId="view_DepartmentsPageDef"/>
+    <page path="/Employees.jsff" usageId="view_EmployeesPageDef"/>
+    <page path="/springboard-demo.jsf" usageId="view_springboard_demoPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_DeptEmpPagePageDef" path="view.pageDefs.DeptEmpPagePageDef"/>
     <page id="view_EmpSearchPagePageDef" path="view.pageDefs.EmpSearchPagePageDef"/>
     <page id="view_searchByEmailPageDef" path="view.pageDefs.searchByEmailPageDef"/>
+    <page id="view_DepartmentsPageDef" path="view.pageDefs.DepartmentsPageDef"/>
+    <page id="view_EmployeesPageDef" path="view.pageDefs.EmployeesPageDef"/>
+    <page id="view_springboard_demoPageDef" path="view.pageDefs.springboard_demoPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="HrAppModuleDataControl" Package="model"
