@@ -10,7 +10,16 @@
                     <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="530">
                         <f:facet name="first">
                             <af:panelCollection id="pc1">
-                                <f:facet name="menus"/>
+                                <f:facet name="menus">
+                                    <af:menu text="My Options" id="m2" detachable="true">
+                                        <af:commandMenuItem text="Export to Excel" id="cmi1">
+                                            <af:exportCollectionActionListener type="excelHTML" exportedId="t1"/>
+                                        </af:commandMenuItem>
+                                        <af:commandMenuItem text="Print to Page" id="cmi2">
+                                            <af:showPrintablePageBehavior/>
+                                        </af:commandMenuItem>
+                                    </af:menu>
+                                </f:facet>
                                 <f:facet name="toolbar"/>
                                 <f:facet name="statusbar"/>
                                 <af:table value="#{bindings.EmployeesInDepartmentVO.collectionModel}" var="row"
