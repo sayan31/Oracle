@@ -61,5 +61,7 @@
     <action IterBinding="EmployeeDetailsVO1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="EmployeeDetailsVO1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="HrAppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
+            DataControl="HrAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

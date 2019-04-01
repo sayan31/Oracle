@@ -106,7 +106,11 @@
                                     <af:panelGroupLayout layout="vertical" id="pgl3">
                                         <af:panelGroupLayout layout="horizontal" id="pgl4">
                                             <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                                                       disabled="#{!bindings.Commit.enabled}" id="b7"/>
+                                                       id="b7"/>
+                                            <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback" immediate="true"
+                                                       id="b8">
+                                                <af:resetActionListener/>
+                                            </af:button>
                                             <af:button actionListener="#{bindings.First.execute}" text="First"
                                                        disabled="#{!bindings.First.enabled}" partialSubmit="true"
                                                        id="b1"/>

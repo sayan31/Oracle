@@ -263,6 +263,7 @@
                                     <af:panelGroupLayout layout="horizontal" id="pgl1">
                                         <af:button actionListener="#{bindings.First.execute}" text="First"
                                                    disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
+                                        <af:button text="Query" id="b6" action="goQuery"/>
                                         <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
                                                    disabled="#{!bindings.Previous.enabled}" partialSubmit="true"
                                                    id="b2"/>
