@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:outputText value="#{pageFlowScope.username}" id="ot1"/>
+  <af:inputText label="Password" id="it1" binding="#{backin_login.password}">
+    <?audit suppress oracle.adf.faces.region.single-root-in-fragment?>
+  </af:inputText>
+  <af:button text="login" id="b1">
+    <?audit suppress oracle.adf.faces.region.single-root-in-fragment?>
+  </af:button>
+</ui:composition>

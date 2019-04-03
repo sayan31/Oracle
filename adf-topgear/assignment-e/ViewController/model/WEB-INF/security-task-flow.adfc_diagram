@@ -17,6 +17,8 @@
       <property
          name="y">167.5459</property>
       <property
+         name="page">/login.jsff</property>
+      <property
          name="exceptionHandler">false</property>
    </View>
    <Router
@@ -58,9 +60,13 @@
       <property
          name="x">449.0</property>
       <property
+         name="start">false</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>error&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">302.59766</property>
+      <property
+         name="page">/error.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
