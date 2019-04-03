@@ -203,6 +203,20 @@
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.oracle.adf.library</groupId>
+      <artifactId>ADF-Common-Web-Runtime</artifactId>
+      <version>12.2.1-2-0</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle.adf.library</groupId>
+      <artifactId>Oracle-Page-Templates</artifactId>
+      <version>12.2.1-2-0</version>
+      <type>pom</type>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src/</sourceDirectory>

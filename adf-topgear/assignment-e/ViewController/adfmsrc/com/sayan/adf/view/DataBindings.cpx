@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.16.48" id="DataBindings"
              SeparateXMLFiles="false" Package="com.sayan.adf.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/search.jsff" usageId="com_sayan_adf_view_searchPageDef"/>
     <page path="/update.jsff" usageId="com_sayan_adf_view_updatePageDef"/>
+    <page path="/master.jsf" usageId="com_sayan_adf_view_masterPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_sayan_adf_view_searchPageDef" path="com.sayan.adf.view.pageDefs.searchPageDef"/>
     <page id="com_sayan_adf_view_updatePageDef" path="com.sayan.adf.view.pageDefs.updatePageDef"/>
+    <page id="com_sayan_adf_view_masterPageDef" path="com.sayan.adf.view.pageDefs.masterPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="HrAppModuleDataControl" Package="com.sayan.adf.model.appmodule"
