@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="products.jsf" id="d1">
+    <af:form id="f1">
+      <af:pageTemplate viewId="/templates/storetemplate.jsf" id="pt1">
+        <f:facet name="center">
+          <af:panelSplitter id="ps1">
+            <f:facet name="first">
+              <af:panelAccordion discloseMany="false" id="pa1">
+                <af:showDetailItem id="pane1" text="My Cart"/>
+                <af:showDetailItem text="Recommendations" id="sdi1"/>
+              </af:panelAccordion>
+            </f:facet>
+            <f:facet name="second">
+              <af:panelSplitter id="ps2" orientation="vertical">
+                <f:facet name="first">
+                  <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                  </af:panelCollection>
+                </f:facet>
+                <f:facet name="second">
+                  <af:panelTabbed position="above" id="pt2">
+                    <af:showDetailItem id="tab1" text="Product Details"/>
+                    <af:showDetailItem text="Ratings" id="sdi2"/>
+                  </af:panelTabbed>
+                </f:facet>
+              </af:panelSplitter>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+        <f:attribute name="title" value="Store Front"/>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

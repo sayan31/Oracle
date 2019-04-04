@@ -23,7 +23,7 @@
             <af:image source="../images/branding_logo.jpg" id="pt_i1"/>
           </af:gridCell>
           <af:gridCell marginStart="5px" width="100px" marginEnd="5px" id="pt_gc2">
-            <af:outputText value="#{attrs.title}" id="pt_ot1"/>
+            <af:outputText value="#{attrs.title}" id="pt_ot1" inlineStyle="color:Teal; font-size:large;"/>
           </af:gridCell>
         </af:gridRow>
       </af:panelGridLayout>
