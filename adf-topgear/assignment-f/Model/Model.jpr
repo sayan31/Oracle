@@ -76,9 +76,13 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/cepContentSet"/>
    </list>
    <value n="defaultPackage" v="com.sayan.adf.model"/>
+   <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <value n="hasDataControls" v="true"/>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADFbc"/>
+         <string v="ADFm"/>
          <string v="Java"/>
          <string v="Maven"/>
          <string v="XML"/>

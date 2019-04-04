@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.16.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.sayan.adf.view" ClientType="Generic">
+  <pageMap>
+    <page path="/pages/products.jsf" usageId="com_sayan_adf_view_productsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_sayan_adf_view_productsPageDef" path="pages.productsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="StoreProducts" path="com.sayan.adf.model.StoreProducts"/>
+  </dataControlUsages>
+</Application>
