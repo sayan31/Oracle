@@ -65,5 +65,18 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="productsIterator" id="products2">
+      <nodeDefinition DefName="com.sayan.adf.model.pojo.Product" Name="products20">
+        <AttrNames>
+          <Item Value="categoryId"/>
+          <Item Value="id"/>
+          <Item Value="name"/>
+          <Item Value="cost"/>
+          <Item Value="shortDesc"/>
+          <Item Value="rating"/>
+          <Item Value="imageLocation"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

@@ -9,7 +9,11 @@
           <af:panelSplitter id="ps1">
             <f:facet name="first">
               <af:panelAccordion discloseMany="false" id="pa1">
-                <af:showDetailItem id="pane1" text="My Cart"/>
+                <af:showDetailItem id="pane1" text="My Cart">
+                  <af:outputText value="No Items" id="ot8">
+                    <af:attributeDropTarget attribute="value"/>
+                  </af:outputText>
+                </af:showDetailItem>
                 <af:showDetailItem text="Recommendations" id="sdi1">
                   <af:listView value="#{bindings.products1.collectionModel}" var="item"
                                emptyText="#{bindings.products1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -37,7 +41,19 @@
               <af:panelSplitter id="ps2" orientation="vertical">
                 <f:facet name="first">
                   <af:panelCollection id="pc1">
-                    <f:facet name="menus"/>
+                    <f:facet name="menus">
+                      <af:menu text="My Options" id="m2" detachable="true">
+                        <af:commandMenuItem text="Export to Excel" id="cmi1">
+                          <af:exportCollectionActionListener type="excelHTML" exportedId="t1"/>
+                        </af:commandMenuItem>
+                        <af:commandMenuItem text="Show Specials" id="cmi2">
+                          <af:showPopupBehavior popupId=":::p1"/>
+                        </af:commandMenuItem>
+                        <af:commandMenuItem text="Printable Page" id="cmi3">
+                          <af:showPrintablePageBehavior/>
+                        </af:commandMenuItem>
+                      </af:menu>
+                    </f:facet>
                     <f:facet name="toolbar"/>
                     <f:facet name="statusbar"/>
                     <af:table value="#{bindings.products.collectionModel}" var="row"
@@ -64,7 +80,9 @@
                       <af:column sortProperty="#{bindings.products.hints.name.name}" sortable="true"
                                  headerText="#{bindings.products.hints.name.label}" id="c3">
                         <af:outputText value="#{row.name}" shortDesc="#{bindings.products.hints.name.tooltip}"
-                                       id="ot3"/>
+                                       id="ot3">
+                          <af:attributeDragSource attribute="value"/>
+                        </af:outputText>
                       </af:column>
                       <af:column sortProperty="#{bindings.products.hints.cost.name}" sortable="true"
                                  headerText="#{bindings.products.hints.cost.label}" id="c4">
@@ -89,6 +107,11 @@
                                        shortDesc="#{bindings.products.hints.imageLocation.tooltip}" id="ot7"/>
                       </af:column>
                     </af:table>
+                    <f:facet name="viewMenu">
+                      <af:commandMenuItem text="View As Carousel" id="cmi4">
+                        <af:showPopupBehavior popupId=":::p2"/>
+                      </af:commandMenuItem>
+                    </f:facet>
                   </af:panelCollection>
                 </f:facet>
                 <f:facet name="second">
@@ -130,7 +153,10 @@
                                            required="#{bindings.shortDesc.hints.mandatory}"
                                            columns="#{bindings.shortDesc.hints.displayWidth}"
                                            shortDesc="#{bindings.shortDesc.hints.tooltip}" id="it5">
-                          <facet name="footer"/>
+                          <?audit suppress oracle.jdeveloper.jsp.validate-children?>
+                          <facet name="footer">
+                            <?audit suppress oracle.ide.xml.validation-error?>
+                          </facet>
                         </af:richTextEditor>
                         <af:inputNumberSlider value="#{bindings.rating.inputValue}"
                                               label="#{bindings.rating.hints.label}"
@@ -155,6 +181,30 @@
         </f:facet>
         <f:attribute name="title" value="Store Front"/>
       </af:pageTemplate>
+      <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+        <af:dialog id="d2">
+          <?audit suppress oracle.adf.faces.compreqtitle?>
+          <f:facet name="buttonBar"/>
+          <af:image source="#{resource['images:JDeveloper.gif']}" id="i1"/>
+        </af:dialog>
+      </af:popup>
+      <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+        <af:dialog id="d3" type="ok">
+          <?audit suppress oracle.adf.faces.compreqtitle?>
+          <f:facet name="buttonBar"/>
+          
+          <af:carousel currentItemKey="#{bindings.products2.treeModel.rootCurrencyRowKey}"
+                       value="#{bindings.products2.treeModel}" var="item" id="c8">
+            <f:facet name="nodeStamp">
+              <af:carouselItem id="ci1">
+                <af:image source="/images/products/#{item.imageLocation}" id="i2">
+                  <?audit suppress oracle.adf.faces.imgshortdesc?>
+                </af:image>
+              </af:carouselItem>
+            </f:facet>
+          </af:carousel>
+        </af:dialog>
+      </af:popup>
     </af:form>
   </af:document>
 </f:view>
