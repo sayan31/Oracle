@@ -78,5 +78,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="productsIterator" id="rating12">
+      <AttrNames>
+        <Item Value="rating"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

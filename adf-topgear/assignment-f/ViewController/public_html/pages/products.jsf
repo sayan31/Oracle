@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
   <af:document title="products.jsf" id="d1">
     <af:messages id="m1"/>
     <af:form id="f1">
@@ -172,7 +173,11 @@
                         </f:facet>
                       </af:panelFormLayout>
                     </af:showDetailItem>
-                    <af:showDetailItem text="Ratings" id="sdi2"/>
+                    <af:showDetailItem text="Ratings" id="sdi2">
+                      <dvt:dialGauge id="dialGauge1" maximum="10" value="#{bindings.rating12.inputValue}">
+                        <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+                      </dvt:dialGauge>
+                    </af:showDetailItem>
                   </af:panelTabbed>
                 </f:facet>
               </af:panelSplitter>
