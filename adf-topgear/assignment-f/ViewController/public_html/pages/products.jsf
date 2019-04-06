@@ -174,7 +174,8 @@
                       </af:panelFormLayout>
                     </af:showDetailItem>
                     <af:showDetailItem text="Ratings" id="sdi2">
-                      <dvt:dialGauge id="dialGauge1" maximum="10" value="#{bindings.rating12.inputValue}">
+                      <dvt:dialGauge id="dialGauge1" maximum="10" value="#{bindings.rating12.inputValue}"
+                                     partialTriggers="pc1:t1">
                         <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
                       </dvt:dialGauge>
                     </af:showDetailItem>
